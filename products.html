@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محصولات | پوشاک لند</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body class="shop-body">
+
+<div class="bg-bubble bubble-1"></div>
+<div class="bg-bubble bubble-2"></div>
+<div class="bg-bubble bubble-3"></div>
+
+<div id="siteHeader"></div>
+
+<main class="page-container">
+  <h1 class="page-title">محصولات</h1>
+  <p class="page-subtitle">دسته‌بندی مورد نظر را انتخاب کنید</p>
+
+  <!-- فیلتر دسته‌بندی (تب‌ها) -->
+  <div class="category-tabs" id="categoryTabs"></div>
+
+  <!-- گرید محصولات -->
+  <div class="products-grid" id="productsGrid"></div>
+  
+  <!-- حالت خالی بودن (بدون دکمه آپلود) -->
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <span>📦</span>
+    <p>محصولی در این دسته یافت نشد.</p>
+    <p style="font-size: 13px; opacity: 0.7;">(لطفاً لیست محصولات را در فایل products.json بررسی کنید)</p>
+  </div>
+</main>
+
+<footer class="shop-footer">
+  <p>© ۲۰۲۵ پوشاک لند | Pushak Land — تمامی حقوق محفوظ است.</p>
+</footer>
+
+<script src="auth.js"></script>
+<script src="shop.js"></script>
+<script>
+  initHeader('products');
+  initCategoryTabs();
+  renderProductsPage();
+</script>
+</body>
+</html>

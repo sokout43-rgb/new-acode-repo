@@ -1,0 +1,49 @@
+<!-- ============ register.html ============ -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ثبت‌نام</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<div class="container">
+  <div class="card" id="registerPage">
+    <div class="icon-circle">✨</div>
+    <h2>ایجاد حساب جدید</h2>
+    <p class="subtitle">به ما بپیوندید</p>
+
+    <div class="message" id="registerMsg"></div>
+
+    <form id="registerForm">
+      <div class="input-group">
+        <input type="text" id="regUser" placeholder="نام کاربری" autocomplete="username" required>
+        <span class="icon">👤</span>
+      </div>
+      <div class="input-group">
+        <input type="password" id="regPass" placeholder="رمز عبور (حداقل ۴ کاراکتر)" autocomplete="new-password" required>
+        <span class="icon">🔒</span>
+        <button type="button" class="toggle-pass" onclick="togglePassword('regPass', this)">👁️</button>
+      </div>
+      <div class="input-group">
+        <input type="password" id="regPass2" placeholder="تکرار رمز عبور" autocomplete="new-password" required>
+        <span class="icon">🔐</span>
+        <button type="button" class="toggle-pass" onclick="togglePassword('regPass2', this)">👁️</button>
+      </div>
+      <button type="submit" class="btn">ثبت‌نام</button>
+    </form>
+
+    <div class="divider">یا</div>
+    <p class="switch-text">حساب دارید؟ <a href="login.html">وارد شوید</a></p>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- ============ upload.html (آپلود محصول - فقط برای کاربران وارد شده) ============ -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آپلود محصول</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body class="shop-body">
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<header class="shop-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛍️ <span>فروشگاه من</span></a>
+    <nav class="nav-links">
+      <a href="index.html">خانه</a>
+      <a href="upload.html" class="active">آپلود محصول</a>
+    </nav>
+    <div class="auth-buttons" id="authButtons"></div>
+  </div>
+</header>
+
+<main class="upload-wrapper">
+  <div class="card upload-card">
+    <div class="icon-circle">📤</div>
+    <h2>آپلود محصول جدید</h2>
+    <p class="subtitle">اطلاعات محصول را وارد کنید</p>
+
+    <div class="message" id="uploadMsg"></div>
+
+    <form id="uploadForm">
+      <div class="input-group">
+        <input type="text" id="productName" placeholder="نام محصول" required>
+        <span class="icon">📝</span>
+      </div>
+
+      <div class="input-group">
+        <input type="number" id="productPrice" placeholder="قیمت (تومان)" min="0" required>
+        <span class="icon">💰</span>
+      </div>
+
+      <div class="input-group">
+        <textarea id="productDesc" placeholder="توضیحات محصول" rows="4" required></textarea>
+        <span class="icon" style="top:20px;transform:none;">📄</span>
+      </div>
+
+      <div class="input-group">
+        <label class="file-label">
+          <input type="file" id="productImage" accept="image/*" hidden>
+          <span class="file-btn">📷 انتخاب تصویر محصول</span>
+          <span class="file-name" id="fileName">تصویری انتخاب نشده</span>
+        </label>
+      </div>
+
+      <div class="input-group">
+        <input type="text" id="productCategory" placeholder="دسته‌بندی (مثلاً: لباس، دیجیتال...)" required>
+        <span class="icon">🏷️</span>
+      </div>
+
+      <button type="submit" class="btn">ثبت محصول</button>
+    </form>
+
+    <p class="switch-text"><a href="index.html">← بازگشت به فروشگاه</a></p>
+  </div>
+</main>
+
+<script src="auth.js"></script>
+<script src="upload.js"></script>
+</body>
+</html>

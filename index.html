@@ -1,0 +1,76 @@
+<!-- ============ index.html ============ -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پوشاک لند | Pushak Land</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body class="shop-body">
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<!-- هدر مشترک (توسط shop.js ساخته می‌شود) -->
+<div id="siteHeader"></div>
+
+<!-- اسلایدر تبلیغات -->
+<section class="hero-slider">
+  <div class="slide active">
+    <div class="slide-content">
+      <span class="slide-badge">🔥 پیشنهاد ویژه</span>
+      <h1>کالکشن جدید پاییز</h1>
+      <p>تا ۴۰٪ تخفیف روی تمام پوشاک</p>
+      <a href="products.html" class="btn">خرید کنید</a>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="slide-content">
+      <span class="slide-badge">👟 جدید</span>
+      <h1>کفش‌های اسپرت</h1>
+      <p>راحتی و استایل در یک قدم</p>
+      <a href="products.html?cat=کفش" class="btn">مشاهده</a>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="slide-content">
+      <span class="slide-badge">🎒 کیف و اکسسوری</span>
+      <h1>استایل خودت را بساز</h1>
+      <p>کیف‌های دست‌دوز با کیفیت</p>
+      <a href="products.html?cat=کیف" class="btn">مشاهده</a>
+    </div>
+  </div>
+  <div class="slider-dots">
+    <span class="dot active" data-i="0"></span>
+    <span class="dot" data-i="1"></span>
+    <span class="dot" data-i="2"></span>
+  </div>
+</section>
+
+<!-- محصولات ویژه -->
+<section class="section">
+  <h2 class="section-title">محصولات ویژه</h2>
+  <p class="section-subtitle">پرفروش‌ترین‌های این هفته</p>
+  <div class="products-grid" id="featuredGrid"></div>
+  <div class="section-more">
+    <a href="products.html" class="btn">مشاهده همه محصولات</a>
+  </div>
+</section>
+
+<!-- فوتر -->
+<footer class="shop-footer">
+  <p>© ۲۰۲۵ پوشاک لند | Pushak Land — تمامی حقوق محفوظ است.</p>
+</footer>
+
+<script src="auth.js"></script>
+<script src="shop.js"></script>
+<script>
+  initHeader('index');
+  renderFeatured();
+  initSlider();
+</script>
+</body>
+</html>
